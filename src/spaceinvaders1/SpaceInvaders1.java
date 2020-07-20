@@ -508,7 +508,7 @@ class Nave extends JLabel{
         this.setBounds(300-ancho/2, 650-alto, ancho, alto);
         //this.setBorder(BorderFactory.createLineBorder(Color.WHITE));
         a = new Area(this.getX()-10,this.getX()+ancho+10,this.getY(),this.getY()+alto);
-        ImageIcon i = new ImageIcon("../SpaceInvaders1/src/spaceinvaders1/nave.png");
+        ImageIcon i = new ImageIcon("./src/spaceinvaders1/nave.png");
         ImageIcon iconoEscala = new ImageIcon(i.getImage().getScaledInstance(ancho, alto, java.awt.Image.SCALE_DEFAULT));
         this.setIcon(iconoEscala);
     }
@@ -544,7 +544,7 @@ class Enemigo extends JLabel{
         this.fila=fila;
         this.columna=columna;
         this.setSize(ancho, alto);
-        ImageIcon i = new ImageIcon("../SpaceInvaders1/src/spaceinvaders1/Enemigo.png");
+        ImageIcon i = new ImageIcon("./src/spaceinvaders1/Enemigo.png");
         Image transicion = i.getImage();
         Image nuevaI = transicion.getScaledInstance(ancho, alto,  java.awt.Image.SCALE_SMOOTH); 
         i = new ImageIcon(nuevaI);
@@ -591,7 +591,7 @@ class Record extends JFrame{//ventana que aparece cuando se gana el juego
         c = new JPanel();
         c.setLayout(null);
         try {
-            lector = new FileReader("../SpaceInvaders1/src/record.txt");//lee el record del ultimo juego que se gano
+            lector = new FileReader("./src/record.txt");//lee el record del ultimo juego que se gano
             int i=0;
             while(i!=-1){
                 i = lector.read();
